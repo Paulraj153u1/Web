@@ -1,4 +1,4 @@
+# node.js
+#
 node_modules/
-build/
-.env
-index.js
+npm-debug.log
