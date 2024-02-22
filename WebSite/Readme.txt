@@ -19,3 +19,12 @@ npm install axios
 // for cors issue install in server side
 npm install cors
 
+// to client side
+npm install react-router-dom
+
+// snippet
+ES7 React/Redux/GraphQL/React-Native snippets
+// for client
+npm install formik
+// for client
+npm install yup
