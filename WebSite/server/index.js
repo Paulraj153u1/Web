@@ -1,9 +1,13 @@
 const express = require('express');
 const app = express();
-
-app.use(express.json());
-
+const cors= require("cors")
 const db = require('./models');
+
+//Middle ware
+app.use(express.json());
+app.use(cors());
+
+// Routes
 const postRouterGet = require('./routes/PostsRoutes');
 app.use('/posts', postRouterGet);
 app.use('/posts', postRouterGet);
