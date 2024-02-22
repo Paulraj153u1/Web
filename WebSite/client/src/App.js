@@ -9,6 +9,7 @@ import {
 
 import Home from './pages/Home';
 import CreatePost from './pages/CreatePost';
+import Posts from './pages/Posts';
 
 
 
@@ -18,11 +19,15 @@ function App() {
   return (
     <div className="App">
      <Router>
-     <Link to='/createPost'>Add Post</Link>
+      <div className='navbar'>
+     <Link to='/'>Home</Link>
+     <Link to='/createPost'>Creat A Post</Link>
+      </div>
       <Routes>
       {/* <Route path='/' element={<Home/>} /> */}
       <Route path='/' exact Component={Home} />
       <Route path='/createPost' exact Component={CreatePost} />
+      <Route path='/post/:id' exact Component={Posts} />
       </Routes>
       </Router>
     </div>
