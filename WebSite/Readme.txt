@@ -10,3 +10,12 @@ after you can run as npm start ,no need to run as nodemon index.js
 //for using DB access
 npm install sequelize sequelize-cli
 
+//Move to client 
+npx create-react-app client
+
+//install axios
+npm install axios
+
+// for cors issue install in server side
+npm install cors
+
