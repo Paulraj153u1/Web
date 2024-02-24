@@ -4,14 +4,19 @@ const {Posts}= require("../models")
 
 // GET route
 router.get('/',  async (req, res) => {
-//   res.send('Hi');
 const listOfPosts =  await Posts.findAll()
 res.json(listOfPosts);
 });
 
+//findbyId
+router.get('/byId/:id',async(req,res)=>{
+  const id =req.params.id;
+  const postGetlist = await Posts.findByPk(id);
+  res.json(postGetlist);
+})
+
 // POST route
 router.post('/', async (req, res) => {
-  // Handle the POST request here
   const post = req.body;
  await Posts.create(post)
   res.json(post)
