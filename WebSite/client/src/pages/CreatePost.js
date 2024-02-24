@@ -2,9 +2,10 @@ import React from 'react'
 import {Formik,Form,Field,ErrorMessage} from "formik"
 import * as Yup from 'yup';
 import  axios from 'axios'
+import {useNavigate} from 'react-router-dom'
 
 function CreatePost() {
-    
+  const navigate = useNavigate();
     const initialValues={
         title:'',
         postText:'',
@@ -18,7 +19,9 @@ const validationSchemaCreatePost=Yup.object().shape({
 })
     const onSubmitPost=(dataPost)=>{
         axios.post("http://localhost:3001/posts",dataPost).then((res)=>{
-            console.log("ress post",res);
+            if (res?.status==200) {
+              navigate('/'); 
+            }
           }).catch(err =>{
             console.log(err)
           })
