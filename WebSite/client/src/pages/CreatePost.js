@@ -19,7 +19,7 @@ const validationSchemaCreatePost=Yup.object().shape({
 })
     const onSubmitPost=(dataPost)=>{
         axios.post("http://localhost:3001/posts",dataPost).then((res)=>{
-            if (res?.status==200) {
+            if (res?.status===200) {
               navigate('/'); 
             }
           }).catch(err =>{
