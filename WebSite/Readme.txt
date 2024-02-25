@@ -28,3 +28,6 @@ ES7 React/Redux/GraphQL/React-Native snippets
 npm install formik
 // for client
 npm install yup
+
+//for server side
+npm install bcrypt
