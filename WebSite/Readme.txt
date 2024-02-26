@@ -31,3 +31,13 @@ npm install yup
 
 //for server side
 npm install bcrypt
+
+//for server side
+npm install jsonwebtoken
+
+//vs code extension
+Blackbox AI Code Generation, Code Chat, Code Search,
+Bracket Highlighter,
+Prettier - Code formatter,
+vscode-icons,
+ES7 React/Redux/GraphQL/React-Native snippets

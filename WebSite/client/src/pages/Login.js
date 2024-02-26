@@ -18,7 +18,8 @@ const validationSchemaCreatePost=Yup.object().shape({
     const onSubmitLogin=(dataPost)=>{
         axios.post("http://localhost:3001/auth/login",dataPost).then((res)=>{
             console.log("resss",res);
-            if (res?.data===200) {
+            if (res?.data?.data===200) {
+              sessionStorage.setItem("accessToken",res?.data?.accessToken)
               alert('You have successfully Logged In !')
               navigate('/'); 
             }
