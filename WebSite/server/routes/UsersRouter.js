@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const {Users}= require("../models")
 const bcrypt = require ("bcrypt")
+const  {sign}=require("jsonwebtoken");
 
 
 // User add route
@@ -25,7 +26,8 @@ router.post('/login', async (req, res) => {
     bcrypt.compare(password,user.password).then((result)=> {
         if(!result) res.json({error :'Password incorrect'})
         else{
-         res.json(200)
+       const accessToken =sign({username:user.username,id:user.id},"The simple token")
+         res.json({accessToken ,data:200})
            }
     })
   });
