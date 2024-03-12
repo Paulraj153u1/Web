@@ -1,3 +1,6 @@
+//for server
+npm init
+
 npm install express cors mysql2
 
 // for automatic save
