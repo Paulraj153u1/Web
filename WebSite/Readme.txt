@@ -1,7 +1,8 @@
 //for server
 npm init
 
-npm install express cors mysql2
+npm install express body-parser mongoose cors
+
 
 // for automatic save
 npm install nodemon

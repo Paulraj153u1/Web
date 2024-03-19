@@ -42,6 +42,9 @@ body {
   display: grid;
   place-content: center;
 }
+.Postname{
+  margin-left: 50%;
+}
 
 .post .footer {
   flex: 20%;

@@ -7,6 +7,17 @@ const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
 const config = require(__dirname + "./../config/config.json")[env];
 const db = {};
+// const { MongoClient } = require('mongodb');
+// const url = 'mongodb://localhost:27017'; // MongoDB connection URL
+// const dbName = 'experessdb'; // Your MongoDB database name
+
+
+// MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true }, (err, client) => {
+//   if (err) throw err;
+
+//   const db = client.db(dbName);
+//   // Continue with MongoDB operations
+// });
 
 let sequelize;
 if (config.use_env_variable) {

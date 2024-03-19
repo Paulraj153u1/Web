@@ -9,6 +9,7 @@ const validateTokenMiddleWare = (req,res,next) => {
     else{
          try {
         const validToken = verify(accessToken,'The simple token')
+        req.user=validToken;
         if (validToken) {
             return next();
         }
